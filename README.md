@@ -1,7 +1,7 @@
 # To-do List (Estilo Kanban)
 
 Este projeto foi desenvolvido com a finalidade de aprendizado e marcou meu primeiro contato prático com a linguagem de programação JavaScript. Ele me trouxe grandes frutos de conhecimento, permitindo-me explorar e implementar funcionalidades interativas em uma aplicação web real.
--
+
 <br>
 
 ➡️ **[Acesse a demonstração ao vivo clicando aqui!](https://jprospirski.github.io/To-do-List/)** ⬅️
