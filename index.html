@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-do List</title>
+</head>
+<body>
+    <header>
+        <h1>To-do List</h1>
+        <h2>Lista de afazeres simples</h2> </header>
+    <main>
+        <section>
+            <form class="nova-tarefa" id="form-nova-tarefa">
+                <input type="text" id="input-nova-tarefa" placeholder="Qual a sua proxima tarefa?">
+                <button class="botao-adicionar">Adicionar</button>
+            </form>
+        </section>
+        <section class="tabela-tarefas">
+            <div class="coluna-tarefas">
+                <h2>A fazer</h2>
+                <ul id="lista-a-fazer">
+                </ul>
+            </div>
+
+            <div class="coluna-tarefas">
+                <h2>Em andamento</h2>
+                <ul id="lista-em-andamento">
+                </ul>
+            </div>
+
+            <div class="coluna-tarefas">
+                <h2>Concluído</h2>
+                <ul id="lista-concluido">
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Site simples para pratica de estudos em HTML, CSS e JavaScript</p>
+    </footer>
+
+    <div id="modal-overlay" class="overlay-escondido">
+        <div id="modal-box">
+            <form id="form-editar-tarefa">
+                <h2>Editar Tarefa</h2>
+                <input type="text" id="input-editar-tarefa">
+                <div class="modal-botoes">
+                    <button type="button" id="botao-cancelar">Cancelar</button>
+                    <button type="submit" id="botao-salvar">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="confirm-overlay" class="overlay-escondido">
+        <div id="modal-box">
+            <h2>Confirmar Remoção</h2>
+            <p>Você tem certeza de que deseja remover esta tarefa?</p>
+            <div class="modal-botoes">
+                <button type="button" id="botao-cancelar-remocao">Cancelar</button>
+                <button id="botao-confirmar-remocao">Confirmar</button>
+            </div> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+  /* Paleta "Café com Leite" */
+  --cor-fundo: #F5F1ED;
+  --cor-superficie: #EAE3DB;
+  --cor-borda-sutil: #807b76;
+  --cor-texto-principal: #4A443F;
+  --cor-texto-secundario: #8A7F7C;
+  --cor-destaque: #D57E6B;
+  --cor-perigo: #D16464;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: 'Roboto', sans-serif;
+    color: var(--cor-texto-principal);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem 0 1rem;
+    background-color: transparent;
+}
+
+header h1 {
+    color: var(--cor-texto-principal);
+    font-size: 3rem;
+}
+
+header h2 {
+    color: var(--cor-texto-secundario);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+main {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda-sutil);
+    box-shadow: none;
+    padding: 1.5rem;
+    margin: 2rem;
+    border-radius: 20px;
+    flex-grow: 1;
+}
+
+.nova-tarefa {
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+}
+
+input[type="text"] {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda-sutil);
+    color: var(--cor-texto-principal);
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: var(--cor-destaque);
+}
+
+button {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.botao-adicionar {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+.botao-adicionar:hover {
+    filter: brightness(0.9);
+}
+
+.botao-remover {
+    background-color: transparent;
+    color: var(--cor-texto-secundario);
+    border: 1px solid var(--cor-borda-sutil);
+}
+.botao-remover:hover {
+  background-color: var(--cor-perigo);
+  color: white;
+  border-color: var(--cor-perigo);
+}
+
+.botao-editar {
+    background-color: transparent;
+    color: var(--cor-texto-secundario);
+    border: 1px solid var(--cor-borda-sutil);
+}
+.botao-editar:hover {
+  background-color: var(--cor-superficie);
+  color: var(--cor-texto-principal);
+  border-color: var(--cor-texto-secundario);
+}
+
+.botoes { /* CORRIGIDO DE .botoes-tarefa PARA .botoes */
+    display: flex;
+    gap: 8px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+    list-style: none; /* Remove marcadores */
+}
+
+li.item-da-lista {
+    background-color: var(--cor-superficie);
+    border: 1px solid var(--cor-borda-sutil);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+span {
+    color: var(--cor-texto-principal); /* CORRIGIDO */
+}
+
+.tabela-tarefas {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 1.5rem;
+}
+
+.tabela-tarefas h2 {
+  text-align: center;
+  color: var(--cor-texto-secundario); /* CORRIGIDO */
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.coluna-tarefas {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda-sutil);
+    flex: 1;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.coluna-tarefas ul {
+    flex-grow: 1;
+    border-radius: 8px;
+    border: 2px solid transparent; /* CORRIGIDO: Base para o 'drag-over' */
+    transition: all 0.2s ease;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p {
+    color: var(--cor-texto-secundario);
+}
+
+.arrastando {
+    display: none;
+}
+
+.drag-over {
+  border-color: var(--cor-destaque); /* CORRIGIDO: Apenas muda a cor da borda */
+}
+
+/* --- ESTILOS DOS MODAIS CORRIGIDOS --- */
+#modal-overlay, #confirm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-box {
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda-sutil);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 500px;
+}
+
+#modal-box h2 {
+    margin-bottom: 1rem;
+    color: var(--cor-texto-principal);
+}
+
+.modal-botoes {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+#botao-salvar {
+    background-color: var(--cor-destaque);
+    color: white;
+}
+#botao-salvar:hover {
+    filter: brightness(0.9);
+}
+
+#botao-confirmar-remocao {
+    background-color: var(--cor-perigo);
+    color: white;
+}
+#botao-confirmar-remocao:hover {
+    filter: brightness(0.9);
+}
+
+.overlay-escondido {
+    display: none !important;
+}
