@@ -1,12 +1,10 @@
 # To-do List (Estilo Kanban)
 
 Este projeto foi desenvolvido com a finalidade de aprendizado e marcou meu primeiro contato prático com a linguagem de programação JavaScript. Ele me trouxe grandes frutos de conhecimento, permitindo-me explorar e implementar funcionalidades interativas em uma aplicação web real.
-
-**Status do Projeto:** Concluído ✔️
-
+-
 <br>
 
-➡️ **[Acesse a demonstração ao vivo clicando aqui!](https://SEU-USUARIO.github.io/SEU-REPOSITORIO/)** ⬅️
+➡️ **[Acesse a demonstração ao vivo clicando aqui!](https://jprospirski.github.io/To-do-List/)** ⬅️
 <br>
 
 ## ✨ Funcionalidades
@@ -35,12 +33,8 @@ Sendo meu primeiro contato aprofundado com a linguagem, este projeto foi o campo
 * **Persistência de Dados com `localStorage`:** Armazenamento e recuperação de dados em formato JSON para manter o estado da aplicação entre as sessões.
 * **Manipulação de Classes e Estilos:** Alteração de classes CSS para exibir/esconder os modais de edição/confirmação e para fornecer feedback visual ao arrastar um item.
 
-## 📸 Screenshots
-
-![Screenshot da aplicação mostrando as três colunas](./assets/screenshot-1.png)
-
 ## 👤 Autor
 
 Feito por **João Pedro Rospirski Pegorini**.
 
-[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/SEU-PERFIL/)
+[<img src="https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" />](https://www.linkedin.com/in/rospirski/)
