@@ -4,7 +4,7 @@ Este projeto foi desenvolvido com a finalidade de aprendizado e marcou meu prime
 
 <br>
 
-➡️ **[Acesse a demonstração ao vivo clicando aqui!](https://jprospirski.github.io/To-do-List/)** ⬅️
+➡️ **[Clique aqui para visualizar!](https://jprospirski.github.io/To-do-List/)** ⬅️
 <br>
 
 ## ✨ Funcionalidades
